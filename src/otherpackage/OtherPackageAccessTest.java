@@ -1,6 +1,6 @@
 package otherpackage;
 
-import test.*;
+import test.ChildPublic;
 
 /**
  * @author Nick Volynkin  nick.volynkin@gmail.com
@@ -17,6 +17,13 @@ public class OtherPackageAccessTest {
         new ChildProtected().foo();
         new ChildPrivate().foo();
         */
+
+        //legal
+        new OtherPackageChildProtected().foo();
+        new OtherPackageChildPublic().foo();
+
+        //illegal
+        /* new OtherPackageChildPrivate().foo(); */
 
     }
 }
